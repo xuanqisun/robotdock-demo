@@ -2,7 +2,7 @@ import { execFileSync } from 'node:child_process';
 
 // Use the existing Git credential helper; never print or persist credentials.
 const mode = process.argv[2] || 'status';
-if (!['status', 'publish'].includes(mode)) throw new Error('Expected status or publish');
+if (!['status', 'publish', 'rebuild'].includes(mode)) throw new Error('Expected status, publish or rebuild');
 let credential;
 try {
   credential = execFileSync('git', ['credential', 'fill'], {
@@ -31,4 +31,13 @@ else if (mode === 'publish' && result.status === 200 && result.data.source?.bran
 }
 const d = result.data;
 console.log(JSON.stringify({httpStatus:result.status,url:d.html_url,status:d.status,source:d.source,message:d.message}));
+if (mode === 'rebuild' && result.status === 200) {
+  const build = await request('/pages/builds', 'POST');
+  console.log(JSON.stringify({httpStatus:build.status,buildStatus:build.data.status,message:build.data.message}));
+  if (build.status < 200 || build.status >= 300) process.exitCode=1;
+}
+if (mode === 'status' && result.status === 200) {
+  const latest = await request('/pages/builds/latest');
+  console.log(JSON.stringify({buildStatus:latest.data.status,commit:latest.data.commit,error:latest.data.error?.message}));
+}
 if(result.status < 200 || result.status >= 300) process.exitCode=1;
