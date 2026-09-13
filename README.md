@@ -2,7 +2,26 @@
 
 面向内部方案讨论的静态商品展示网站。支持背包单品、灵巧手套装和智元夹爪套装切换，展示产品概念、兼容规划和配置清单。无支付、无订单、无数据收集。
 
-网站内容位于 `dist/`，可直接托管于 GitHub Pages。无需安装依赖或构建。
+网站内容位于 `dist/`，已配置 GitHub Pages。无需安装依赖或构建。
+
+访问地址：https://xuanqisun.github.io/robotdock-demo/
+
+源码仓库：https://github.com/xuanqisun/robotdock-demo
+
+## 更新发布
+
+`main` 分支保留源码和说明，`gh-pages` 分支根目录只包含 `dist/` 的网站内容。修改页面后：
+
+```sh
+git add dist
+git commit -m "Update product demo"
+git subtree split --prefix=dist -b gh-pages
+git push origin main gh-pages
+```
+
+GitHub Pages 从 `gh-pages` 的根目录自动发布。`node github-pages.mjs status` 可通过既有 Git 凭据查询发布状态；该脚本不保存或显示凭据。
+
+已检查：320px / 390px 窄屏与 1440px 桌面布局、图片加载、三种套装切换、配置清单弹窗、接口视图以及浏览器错误日志。
 
 ## 内容边界
 
