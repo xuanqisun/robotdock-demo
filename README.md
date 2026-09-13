@@ -34,6 +34,8 @@ GitHub Pages 从 `gh-pages` 的根目录自动发布。`node github-pages.mjs st
 
 ## 图片
 
+`one-g-logo.svg` / `one-g-symbol.svg`：用户公司 ONE-G Robotics 的原版矢量标识，取自所提供 AI 文件同目录的 SVG 导出版本。仅裁切画板空白，未改动标识路径或比例。
+
 `design-sketch.png`：用户提供的设计参考草图。
 
 `robotdock-concept.png`：内置 image_gen 工具生成。提示词：以用户草图中间的背包为设计参考，生成单个石墨灰机器人电子背包的产品概念图，渐窄圆角外壳、中央青色灯条、侧面散热槽、底部接口与顶部安装耳，浅灰棚拍背景，三分之四视角，无机器人、背带、文字或商标。
