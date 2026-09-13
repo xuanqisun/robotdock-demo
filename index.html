@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="RobotDock 通用机器人小背包产品展示：统一供电与通信，探索小背包、灵巧手套装和智元夹爪套装。">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#101b20">
+  <title>RobotDock 小背包 · 通用机器人扩展平台</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23101b20'/%3E%3Cpath d='M9 8h8a6 6 0 0 1 0 12h-3v5H9zm5 5v3h3a1.5 1.5 0 0 0 0-3z' fill='%235dd7e0'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <div class="prototype-strip"><span>产品概念预览</span><span>仅供方案讨论 · 暂未开放销售</span></div>
+  <header class="site-header">
+    <a href="#" class="brand" aria-label="RobotDock 首页"><span class="brand-mark">R<span>▰</span></span><span>ROBOT<span class="brand-light">DOCK</span><small>机器人通用扩展平台</small></span></a>
+    <nav aria-label="主导航"><a href="#details">产品详情</a><a href="#compatibility">兼容设备</a><a href="#specifications">接口与规格</a></nav>
+    <span class="header-caption">为每一次拓展，做好连接。</span>
+  </header>
+  <main class="page-shell">
+    <div class="breadcrumb"><a href="#">产品中心</a><span>/</span><span>机器人扩展</span><span>/</span><strong>RobotDock 小背包</strong></div>
+    <div class="product-layout">
+      <div class="product-content">
+        <section class="gallery" aria-label="商品图片">
+          <div class="gallery-stage">
+            <div class="gallery-topline"><span class="image-chip" id="image-label">工业设计 · 概念效果图</span><span class="image-counter" id="image-count">01 / 03</span></div>
+            <img id="product-image" class="product-image" src="./assets/robotdock-concept.png" alt="RobotDock 小背包概念效果图：深灰外壳、青色状态灯、侧面散热槽和底部接口" width="1254" height="1254" fetchpriority="high">
+            <div id="interface-view" class="interface-view" hidden>
+              <span class="eyebrow">CONNECTION ARCHITECTURE</span><h2>把连接，集中在一起。</h2>
+              <p>拟定接口方案 · 数量与电气规格待确认</p>
+              <div class="diagram-host">宇树 G1 <small>首发适配目标</small></div><div class="diagram-line"></div>
+              <div class="diagram-core">ROBOTDOCK <small>供电管理 / 通信接入 / 设备驱动</small></div><div class="diagram-line"></div>
+              <div class="diagram-ports"><span>CAN</span><span>RS-485</span><span>Ethernet</span><span>USB</span></div><div class="diagram-line"></div>
+              <div class="diagram-tools"><span>夹爪</span><span>灵巧手</span><span>传感器</span></div>
+            </div>
+            <div class="gallery-bottomline"><span id="gallery-caption">源自背部一体化安装构想</span><span class="color-code">GRAPHITE / 石墨灰</span></div>
+          </div>
+          <div class="gallery-controls" role="group" aria-label="选择商品视图">
+            <button class="thumbnail selected" type="button" data-view="concept" aria-pressed="true"><img src="./assets/robotdock-concept.png" alt="" width="64" height="64"><span>外观概念</span></button>
+            <button class="thumbnail" type="button" data-view="sketch" aria-pressed="false"><img src="./assets/design-sketch.png" alt="" width="64" height="64"><span>安装构想</span></button>
+            <button class="thumbnail" type="button" data-view="interfaces" aria-pressed="false"><span class="thumbnail-symbol" aria-hidden="true">I/O</span><span>接口架构</span></button>
+            <span class="gallery-note">概念图，非实物照片</span>
+          </div>
+        </section>
+        <section class="benefits" aria-label="产品设计重点"><div><span class="benefit-index">01</span><h3>集中供电</h3><p>少一些散落的电源与线缆</p></div><div><span class="benefit-index">02</span><h3>统一通信</h3><p>把不同设备接入同一平台</p></div><div><span class="benefit-index">03</span><h3>快速换装</h3><p>已适配设备，简化安装调试</p></div></section>
+        <section class="details-section" id="details">
+          <div class="section-heading"><span class="eyebrow">DESIGNED TO CONNECT</span><span class="section-number">01 / 产品详情</span></div>
+          <h2>一个小背包，<br>连接更多可能。</h2>
+          <p class="section-intro">把供电、通信和设备驱动集中到背包里。搭配对应线束与手腕安装件，让机器人更方便地接入夹爪和灵巧手。</p>
+          <div class="feature-list"><article><span>01</span><div><h3>通用能力，集成在背包内</h3><p>规划集成供电管理、通信接口和驱动软件，减少重复接线与开发。</p></div></article><article><span>02</span><div><h3>专用适配，随套装交付</h3><p>根据末端设备，配齐线束、机械安装件和对应驱动。</p></div></article><article><span>03</span><div><h3>面向已适配设备的即插即用</h3><p>先把选定组合调通，再提供统一的安装、配置和调用体验。</p></div></article></div>
+        </section>
+        <section class="compatibility-section" id="compatibility">
+          <div class="section-heading"><span class="eyebrow">COMPATIBILITY</span><span class="section-number">02 / 兼容设备</span></div>
+          <h2>先把一套做好，<br>再连接下一种。</h2>
+          <div class="device-row"><div class="device-letter">G1</div><div><h3>宇树 G1</h3><p>首发本体 · 具体版本待确认</p></div><span class="status planned">适配目标</span></div>
+          <div class="device-row"><div class="device-letter">AG</div><div><h3>智元夹爪</h3><p>团队已完成接入 · 产品型号待确认</p></div><span class="status integrated">已有接入基础</span></div>
+          <div class="device-row"><div class="device-letter">DH</div><div><h3>灵巧手</h3><p>品牌、型号及控制功能待选定</p></div><span class="status planned">规划接入</span></div>
+          <p class="footnote">接入基础不等于量产验证。兼容范围、安装方式与支持功能，以后续测试结果为准。</p>
+        </section>
+        <section class="spec-section" id="specifications">
+          <div class="section-heading"><span class="eyebrow">TECHNICAL OVERVIEW</span><span class="section-number">03 / 接口与规格</span></div>
+          <h2>接口清晰，拓展有据。</h2>
+          <p class="section-intro">以下为第一代产品规划，便于讨论选型。</p>
+          <dl class="spec-table"><div><dt>通信接口</dt><dd>CAN / RS-485 / Ethernet / USB <small>拟定</small></dd></div><div><dt>供电能力</dt><dd>集中供电与保护 <small>电压、功率及取电方式待确认</small></dd></div><div><dt>软件接口</dt><dd>ROS 2 / DDS / Python SDK <small>规划支持</small></dd></div><div><dt>安装方式</dt><dd>背部安装 + 专用线束 + 手腕转接件</dd></div><div><dt>换装方式</dt><dd>停机后更换、加载设备配置 <small>不承诺带电热插拔</small></dd></div><div><dt>尺寸 / 重量</dt><dd>待结构设计与样机验证后公布</dd></div><div><dt>套装范围</dt><dd>背包单品 / 灵巧手套装 / 智元夹爪套装</dd></div></dl>
+        </section>
+      </div>
+      <aside class="purchase-panel" aria-label="商品选购">
+        <div class="product-tagline"><span class="product-badge">首代产品构想</span><span class="sku-id">RD · 01</span></div>
+        <h1>RobotDock<br><span>通用机器人小背包</span></h1>
+        <p class="product-subtitle">供电、通信、驱动，一体接入。<br>为夹爪和灵巧手，准备一个通用入口。</p>
+        <div class="tag-list"><span>面向宇树 G1</span><span>多接口拓展</span><span>配套设备适配</span></div>
+        <div class="price-box"><div><span class="price-label">产品价格</span><strong>待公布</strong></div><p>当前为展示方案，型号与价格尚未定稿。</p></div>
+        <form id="configuration-form">
+          <fieldset><legend>选择套装 <span>3 种方案</span></legend>
+            <label class="bundle-option"><input type="radio" name="bundle" value="base" checked><span class="bundle-content"><span class="bundle-top"><strong>小背包</strong><span class="bundle-code">BASE</span></span><span class="bundle-description">背包主机 · 基础软件 · 本体连接线束</span></span><span class="radio-indicator" aria-hidden="true"></span></label>
+            <label class="bundle-option"><input type="radio" name="bundle" value="hand"><span class="bundle-content"><span class="bundle-top"><strong>小背包 + 灵巧手</strong><span class="bundle-code">DEXTEROUS</span></span><span class="bundle-description">灵巧操作方案 · 指定型号待选定</span></span><span class="radio-indicator" aria-hidden="true"></span></label>
+            <label class="bundle-option"><input type="radio" name="bundle" value="gripper"><span class="bundle-content"><span class="bundle-top"><strong>小背包 + 智元夹爪</strong><span class="bundle-code">GRIPPER</span></span><span class="bundle-description">基础抓取方案 · 团队已有接入基础</span></span><span class="radio-indicator" aria-hidden="true"></span></label>
+          </fieldset>
+          <div class="selection-detail" aria-live="polite"><span class="selection-label">当前方案</span><h2 id="selected-title">小背包标准版</h2><p id="selected-description">适合已有末端设备、希望自行拓展的开发团队。</p><ul id="selected-items"><li>背包主机</li><li>基础软件与说明</li><li>本体连接线束</li></ul></div>
+          <button class="primary-button" type="submit"><span>查看套装清单</span><span aria-hidden="true">↗</span></button>
+          <p class="checkout-note">仅预览配置，不下单、不付款。</p>
+        </form>
+        <div class="purchase-footer"><span>配套线束</span><span>安装说明</span><span>设备驱动</span></div>
+      </aside>
+    </div>
+  </main>
+  <footer class="site-footer"><a class="footer-brand" href="#">ROBOTDOCK<span> / CONCEPT 01</span></a><p>产品效果演示 · 外观、接口、兼容性与交付内容待最终确认。</p></footer>
+  <dialog id="configuration-dialog" aria-labelledby="dialog-title"><div class="dialog-header"><span class="eyebrow">YOUR CONFIGURATION</span><button class="close-dialog" type="button" aria-label="关闭套装清单">×</button></div><h2 id="dialog-title">套装清单</h2><p id="dialog-description"></p><ul id="dialog-items"></ul><div class="dialog-price"><span>价格</span><strong>待公布</strong></div><p class="footnote">此清单用于内部方案讨论。机器人本体不包含在套装中；尚未开放购买。</p><button class="primary-button close-dialog" type="button">继续查看产品</button></dialog>
+</body>
+</html>
