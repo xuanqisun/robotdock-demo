@@ -9,8 +9,8 @@
   <title>ONE-G Robotics · Sonic Link 遥操作解决方案</title>
   <link rel="icon" type="image/svg+xml" href="../assets/one-g-symbol.svg">
   <link rel="stylesheet" href="../styles.css?v=independent-scroll-1">
-  <link rel="stylesheet" href="./teleoperation.css?v=1">
-  <script src="./app.js?v=1" defer></script>
+  <link rel="stylesheet" href="./teleoperation.css?v=photo-display-2">
+  <script src="./app.js?v=photo-display-2" defer></script>
 </head>
 <body class="teleoperation-page">
   <div class="prototype-strip"><span>遥操作方案预览</span><span>仅供方案展示 · 暂未开放下单</span></div>
@@ -27,13 +27,13 @@
           <div class="gallery-stage teleop-stage">
             <div class="gallery-topline"><span class="image-chip" id="image-label">使用实拍 · 抓取示例</span><span class="image-counter" id="image-count">01 / 04</span></div>
             <button class="gallery-image-button" type="button" id="enlarge-image" aria-label="放大当前商品图片">
-              <img id="product-image" class="product-image" src="./assets/demo-grasp.jpg" alt="操作者佩戴 VR 设备，机器人配合进行玩偶抓取的使用示例" width="2400" height="1080" fetchpriority="high">
+              <img id="product-image" class="product-image demo-photo" src="./assets/demo-grasp.jpg" alt="操作者佩戴 VR 设备，机器人配合进行玩偶抓取的使用示例" width="2400" height="1080" fetchpriority="high">
             </button>
             <div class="gallery-bottomline"><span id="gallery-caption">从人的动作，到机器人的动作。</span><span class="zoom-hint">点击图片放大 ↗</span></div>
           </div>
           <div class="gallery-controls" role="group" aria-label="选择方案视图">
-            <button class="thumbnail selected" type="button" data-view="grasp" aria-pressed="true"><img src="./assets/demo-grasp.jpg" alt="" width="64" height="64"><span>抓取示例</span></button>
-            <button class="thumbnail" type="button" data-view="motion" aria-pressed="false"><img src="./assets/demo-motion.jpg" alt="" width="64" height="64"><span>动作示例</span></button>
+            <button class="thumbnail selected" type="button" data-view="grasp" aria-pressed="true"><img class="demo-photo" src="./assets/demo-grasp.jpg" alt="" width="64" height="64"><span>抓取示例</span></button>
+            <button class="thumbnail" type="button" data-view="motion" aria-pressed="false"><img class="demo-photo" src="./assets/demo-motion.jpg" alt="" width="64" height="64"><span>动作示例</span></button>
             <button class="thumbnail" type="button" data-view="vr" aria-pressed="false"><img src="./assets/pico-kit.jpg" alt="" width="64" height="64"><span>VR 设备</span></button>
             <button class="thumbnail" type="button" data-view="software" aria-pressed="false"><img src="./assets/sonic-link-console.png" alt="" width="64" height="64"><span>软件界面</span></button>
           </div>

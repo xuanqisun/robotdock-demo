@@ -50,6 +50,7 @@ document.querySelectorAll('[data-view]').forEach(button => button.addEventListen
   });
   image.src = view.src;
   image.alt = view.alt;
+  image.classList.toggle('demo-photo', currentView === 'grasp' || currentView === 'motion');
   document.getElementById('image-label').textContent = view.label;
   document.getElementById('gallery-caption').textContent = view.caption;
   document.getElementById('image-count').textContent = view.count;
@@ -72,6 +73,7 @@ function showImage(key) {
   const image = document.getElementById('expanded-image');
   image.src = view.src;
   image.alt = view.alt;
+  image.classList.toggle('demo-photo', key === 'grasp' || key === 'motion');
   document.getElementById('image-dialog-title').textContent = view.label;
   document.getElementById('expanded-caption').textContent = view.caption;
   imageDialog.showModal();

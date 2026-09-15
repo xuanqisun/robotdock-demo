@@ -1,12 +1,15 @@
 /* Extend the existing ONE-G product template without changing RobotDock. */
-.teleop-stage{aspect-ratio:4/3;background:#101719;display:flex;align-items:center;justify-content:center}
-.gallery-image-button{padding:0;background:transparent;width:100%;height:100%;display:flex;align-items:center;justify-content:center}
-.teleop-stage .product-image{height:100%;width:100%;object-fit:contain}
-.teleop-stage .gallery-topline{top:20px}
-.teleop-stage .gallery-bottomline{bottom:20px;color:#edf5f7}
-.teleop-stage .image-counter{color:#fff;background:#101719a6;padding:7px 9px;border-radius:4px}
-.teleop-stage .gallery-bottomline>span{background:#101719c9;padding:6px 9px;border-radius:4px}
-.teleop-stage .image-chip{background:#ffffffed}
+.teleop-stage{aspect-ratio:auto;background:#f5f7f7;border:1px solid var(--line);display:flex;flex-direction:column}
+.gallery-image-button{padding:0;background:transparent;width:100%;height:auto;aspect-ratio:16/9;position:relative;display:block;overflow:hidden}
+.teleop-stage .product-image{position:absolute;inset:0;height:100%;width:100%;object-fit:contain}
+.teleop-stage .gallery-topline,.teleop-stage .gallery-bottomline{position:static;width:100%;padding:12px 15px;gap:10px}
+.teleop-stage .gallery-bottomline{color:#546970;line-height:1.65}
+.teleop-stage .image-counter{color:#60767d;white-space:nowrap}
+.teleop-stage .image-chip{background:transparent;padding:0;color:#4a626c}
+/* The supplied 2400×1080 photos contain 240px black bars on each side.
+   A centered 16:9 cover view hides only those bars; the originals stay intact. */
+.demo-photo{filter:brightness(1.2) contrast(1.02)}
+.teleop-stage .product-image.demo-photo{object-fit:cover}
 .gallery-image-button:focus-visible{outline-offset:-5px}
 .teleoperation-page .thumbnail{flex:1;max-width:112px;min-width:0;font-size:.875rem}
 .teleoperation-page .thumbnail img{width:100%;height:55px;object-fit:cover}
@@ -46,8 +49,10 @@
 .image-dialog .dialog-header{margin-bottom:16px;gap:20px}
 .image-dialog .dialog-header h2{font-size:1rem;line-height:1.6;margin:0}
 .image-dialog .dialog-header button{flex-shrink:0}
-.image-dialog-content{background:#101719;border-radius:6px;overflow:auto}
+.image-dialog-content{background:#f5f7f7;border-radius:6px;overflow:auto}
 .image-dialog img{width:100%;max-height:72svh;object-fit:contain}
+.image-dialog-content:has(.demo-photo){position:relative;aspect-ratio:16/9;max-width:calc(72svh * 16 / 9);margin:0 auto;overflow:hidden}
+.image-dialog-content .demo-photo{position:absolute;inset:0;width:100%;height:100%;max-height:none;object-fit:cover}
 .image-dialog>p{font-size:.875rem;margin-top:14px}
 @media(min-width:1500px){.teleop-stage{max-height:none}}
 @media(max-width:1100px){.teleop-stage .zoom-hint{display:none}.kit-list article{gap:12px}.kit-code{flex-basis:40px;height:40px}}
