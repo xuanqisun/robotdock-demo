@@ -4,6 +4,8 @@
 
 网站内容位于 `dist/`，已配置 GitHub Pages。无需安装依赖或构建。
 
+桌面端右侧选购区保持固定，并在当前可见高度内独立滚动；左侧商品详情使用页面滚动。手机端保留上下浏览。运行 `node tests/purchase-panel.test.mjs` 检查滚动区域高度、移动端恢复及四种套装是否保留。
+
 访问地址：https://xuanqisun.github.io/robotdock-demo/
 
 源码仓库：https://github.com/xuanqisun/robotdock-demo

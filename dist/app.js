@@ -44,3 +44,20 @@ document.getElementById('configuration-form').addEventListener('submit', event =
 });
 document.querySelectorAll('.close-dialog').forEach(button => button.addEventListener('click', () => dialog.close()));
 dialog.addEventListener('click', event => { if (event.target !== dialog) return; const r = dialog.getBoundingClientRect(); if (event.clientX < r.left || event.clientX > r.right || event.clientY < r.top || event.clientY > r.bottom) dialog.close(); });
+
+// Fit the independent scroll area below its actual viewport position, including
+// the initial header offset. Scrolling the right panel never scrolls the page.
+const purchasePanel = document.querySelector('.purchase-panel');
+const desktopLayout = window.matchMedia('(min-width: 801px)');
+function syncPurchasePanelHeight() {
+  if (!desktopLayout.matches) {
+    purchasePanel.style.removeProperty('--purchase-panel-height');
+    return;
+  }
+  const panelTop = Math.max(25, purchasePanel.getBoundingClientRect().top);
+  const availableHeight = Math.max(1, window.innerHeight - panelTop - 25);
+  purchasePanel.style.setProperty('--purchase-panel-height', `${availableHeight}px`);
+}
+window.addEventListener('scroll', syncPurchasePanelHeight, { passive: true });
+window.addEventListener('resize', syncPurchasePanelHeight);
+syncPurchasePanelHeight();
