@@ -1,0 +1,55 @@
+/* Extend the existing ONE-G product template without changing RobotDock. */
+.teleop-stage{aspect-ratio:4/3;background:#101719;display:flex;align-items:center;justify-content:center}
+.gallery-image-button{padding:0;background:transparent;width:100%;height:100%;display:flex;align-items:center;justify-content:center}
+.teleop-stage .product-image{height:100%;width:100%;object-fit:contain}
+.teleop-stage .gallery-topline{top:20px}
+.teleop-stage .gallery-bottomline{bottom:20px;color:#edf5f7}
+.teleop-stage .image-counter{color:#fff;background:#101719a6;padding:7px 9px;border-radius:4px}
+.teleop-stage .gallery-bottomline>span{background:#101719c9;padding:6px 9px;border-radius:4px}
+.teleop-stage .image-chip{background:#ffffffed}
+.gallery-image-button:focus-visible{outline-offset:-5px}
+.teleoperation-page .thumbnail{flex:1;max-width:112px;min-width:0;font-size:.875rem}
+.teleoperation-page .thumbnail img{width:100%;height:55px;object-fit:cover}
+.teleoperation-page .gallery-controls{gap:10px}
+.teleoperation-page .bundle-code{font-size:.75rem}
+.teleoperation-page .radio-indicator{border-radius:4px}
+.default-hand-note{font-size:.875rem;line-height:1.8;color:var(--muted);margin-top:12px}
+.teleoperation-page .selection-detail ul{display:grid;gap:9px}
+.teleoperation-page .selection-detail h2{display:block;margin:8px 0 0;font-size:1.0625rem}
+.teleoperation-page .purchase-footer{gap:12px;font-size:.75rem;flex-wrap:wrap;line-height:1.7}
+.teleoperation-page .purchase-footer span+span::before{margin-right:12px}
+.teleoperation-page .product-badge,.teleoperation-page legend,.teleoperation-page .price-label,.teleoperation-page .tag-list span{font-size:.875rem}
+.teleoperation-page .price-box p,.teleoperation-page .checkout-note,.teleoperation-page .selection-label{font-size:.875rem;line-height:1.7}
+.kit-list{margin-top:28px}
+.kit-list article{display:flex;align-items:flex-start;gap:16px;padding:24px 0;border-bottom:1px solid var(--line)}
+.kit-list article>div{min-width:0;flex:1}
+.kit-list h3{font-size:1rem;line-height:1.6;font-weight:600}
+.kit-list p{font-size:1rem;color:var(--muted);line-height:1.8;margin-top:7px}
+.kit-code{flex:0 0 46px;height:46px;border-radius:8px;display:grid;place-items:center;background:#eef4f4;color:var(--accent);font:500 .875rem ui-monospace,monospace}
+.included-label,.choice-label{font-size:.875rem;white-space:nowrap;border-radius:4px;padding:5px 8px;background:#edf7f6;color:var(--accent);margin-top:4px}
+.choice-label{background:#f0f3f4;color:#62767f}
+.inline-link{display:inline-block;margin-top:12px;font-size:.875rem;color:var(--accent);text-decoration:underline;text-underline-offset:4px}
+.related-product:hover{color:var(--accent)}
+.software-preview{width:100%;padding:0;margin-top:28px;border:1px solid #dce4e6;border-radius:9px;overflow:hidden;background:#f6f8f8;box-shadow:0 12px 35px #15242b08;text-align:left}
+.software-preview-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 16px;font-size:.875rem;color:#445962}
+.software-preview-bar>span:first-child{display:flex;gap:9px;align-items:center}
+.software-preview-bar i{width:7px;height:7px;border-radius:50%;background:var(--accent)}
+.software-preview-bar>span:last-child{color:var(--accent);white-space:nowrap}
+.software-preview img{width:100%;height:auto}
+.software-preview:hover{border-color:var(--accent)}
+.teleoperation-page .footnote{font-size:.875rem;line-height:1.8;color:#708189}
+.teleoperation-page .spec-table{font-size:1rem}
+.teleoperation-page .spec-table>div{font-size:1rem}
+.teleoperation-page .spec-table small{font-size:.875rem;color:#77878e}
+.safety-note{font-size:.875rem;line-height:1.85;color:#697c84;border-left:2px solid #afc9cb;padding-left:15px;margin-top:26px}
+.image-dialog{width:min(1500px,calc(100vw - 32px));padding:20px;max-height:94svh}
+.image-dialog .dialog-header{margin-bottom:16px;gap:20px}
+.image-dialog .dialog-header h2{font-size:1rem;line-height:1.6;margin:0}
+.image-dialog .dialog-header button{flex-shrink:0}
+.image-dialog-content{background:#101719;border-radius:6px;overflow:auto}
+.image-dialog img{width:100%;max-height:72svh;object-fit:contain}
+.image-dialog>p{font-size:.875rem;margin-top:14px}
+@media(min-width:1500px){.teleop-stage{max-height:none}}
+@media(max-width:1100px){.teleop-stage .zoom-hint{display:none}.kit-list article{gap:12px}.kit-code{flex-basis:40px;height:40px}}
+@media(max-width:800px){.teleop-stage{max-height:none}.software-section{order:4;width:100%}.teleoperation-page .thumbnail{max-width:none}.teleoperation-page .site-header nav{gap:16px}}
+@media(max-width:430px){.teleoperation-page .site-header nav{gap:12px}.teleoperation-page .site-header nav a{font-size:.8125rem}.teleoperation-page .breadcrumb{gap:8px;font-size:.75rem}.teleop-stage .gallery-topline{top:12px}.teleop-stage .gallery-bottomline{bottom:12px}.teleoperation-page .thumbnail{padding:5px;font-size:.75rem}.teleoperation-page .thumbnail img{height:42px}.teleoperation-page .gallery-controls{gap:7px}.kit-code{display:none}.included-label,.choice-label{font-size:.75rem}.software-preview-bar{font-size:.75rem;padding:12px}.image-dialog{padding:14px}.teleoperation-page .section-heading{flex-wrap:wrap;gap:10px}.teleoperation-page .company-footer{flex-wrap:wrap;gap:10px}}

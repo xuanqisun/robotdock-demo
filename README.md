@@ -10,6 +10,17 @@
 
 源码仓库：https://github.com/xuanqisun/robotdock-demo
 
+## Sonic Link 遥操作方案
+
+独立产品页面：`https://xuanqisun.github.io/robotdock-demo/teleoperation/`，源码位于 `dist/teleoperation/`。复用 ONE-G 标识与商品模板，保留桌面端左右独立滚动，不改变原小背包页面。
+
+- 基础完整方案包含 PICO、手柄、脚环、Sonic Link 遥操作软件和通用小背包。
+- 智元夹爪为可取消的加购选项，默认不加购；不加购时沿用 G1 自带橡胶手，不额外交付橡胶手。
+- 用户提供的两张使用示例、一张 VR 实拍和一张软件截图按原文件复制到该页面的 `assets/`，没有生成或改动照片。支持缩略图切换与大图查看。
+- 软件描述依据用户提供的界面；三点遥操及 GEM 标为待开发，不宣称已交付。机器人本体暂按不包含处理；价格、具体设备型号、软件授权及安装售后范围仍待确认。
+- 方案清单仅用于展示，不控制真实机器人，不创建订单，不收集数据。沿用公开 GitHub Pages 地址与 noindex 设置。
+- 静态与交互逻辑检查：`node tests/teleoperation.test.mjs`；原商品页回归：`node tests/purchase-panel.test.mjs`。
+
 ## 更新发布
 
 `main` 分支保留源码和说明，`gh-pages` 分支根目录只包含 `dist/` 的网站内容。修改页面后：
