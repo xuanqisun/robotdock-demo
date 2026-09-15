@@ -6,6 +6,7 @@ const pageUrl = new URL('../dist/teleoperation/index.html', import.meta.url);
 const html = readFileSync(pageUrl, 'utf8');
 const app = readFileSync(new URL('../dist/teleoperation/app.js', import.meta.url), 'utf8');
 const css = readFileSync(new URL('../dist/styles.css', import.meta.url), 'utf8');
+const photoCss = readFileSync(new URL('../dist/teleoperation/teleoperation.css', import.meta.url), 'utf8');
 const uniqueIds = [...html.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]);
 assert.equal(new Set(uniqueIds).size, uniqueIds.length, 'Unique element IDs');
 for (const match of html.matchAll(/\b(?:src|href)="([^"]+)"/g)) {
@@ -27,6 +28,11 @@ assert.match(html, /三点遥操与 GEM 尚在待开发状态/);
 assert.match(html, /noindex,nofollow/);
 assert.match(html, /<aside class="purchase-panel"[^>]*tabindex="0">/);
 assert.match(css, /overflow-y:auto;overscroll-behavior-y:contain/);
+assert.match(photoCss, /\.demo-photo\{filter:brightness\(1\.2\) contrast\(1\.02\)\}/);
+assert.match(photoCss, /\.teleop-stage \.product-image\.demo-photo\{object-fit:cover\}/);
+assert.match(photoCss, /aspect-ratio:16\/9/);
+assert.doesNotMatch(photoCss, /background:#101719/);
+assert.match(html, /class="product-image demo-photo"/);
 
 class Element {
   constructor() { this.listeners = new Map(); this.attributes = new Map(); this.children = []; this.checked = false; this.textContent = ''; this.open = false; this.classes = new Set(); this.dataset = {}; }
@@ -105,10 +111,12 @@ for (const [index, thumbnail] of thumbnails.entries()) {
   assert.equal(ids['image-count'].textContent, `0${index + 1} / 04`);
   assert.ok(existsSync(new URL(ids['product-image'].src, pageUrl)));
   assert.ok(ids['product-image'].alt);
+  assert.equal(ids['product-image'].classes.has('demo-photo'), index < 2, 'Only the two demo photos are cropped and brightened');
   assert.equal(thumbnails.filter(node => node.attributes.get('aria-pressed') === 'true').length, 1);
   ids['enlarge-image'].dispatch('click');
   assert.ok(ids['image-dialog'].open);
   assert.equal(ids['expanded-image'].src, ids['product-image'].src);
+  assert.equal(ids['expanded-image'].classes.has('demo-photo'), index < 2, 'Lightbox uses the same photo correction');
   closeImage[0].dispatch('click');
   assert.ok(!ids['image-dialog'].open);
 }
