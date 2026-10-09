@@ -16,19 +16,38 @@ const editions = {
     compute: 'Orin NX 16GB', items: ['算力平台', '基础 SDK', '开发环境', '驱动与文档', '选配应用包（范围待确认）']
   }
 };
-const peripherals = {
-  none: [],
-  hand: ['灵巧手（型号待确认）', '配套线束与安装件（按适配组合确认）'],
-  gripper: ['夹爪（型号待确认）', '配套线束与安装件（按适配组合确认）'],
-  'gripper-camera': ['夹爪（型号待确认）', '双腕相机（2 台，型号待确认）', '配套线束与安装件（按适配组合确认）']
+const accessories = {
+  gripper: { title: '夹爪', unit: '只' },
+  hand: { title: '灵巧手', unit: '只' },
+  camera: { title: '腕部相机', unit: '台' }
 };
+function accessoryQuantity(key) {
+  const value = Number(document.getElementById(`quantity-${key}`).value);
+  return Number.isSafeInteger(Math.floor(value)) && value >= 1 ? Math.floor(value) : 1;
+}
+function selectedAccessories() {
+  return Object.keys(accessories).filter(key => document.getElementById(`accessory-${key}`).checked);
+}
+function updateAccessoryControls() {
+  const selected = selectedAccessories();
+  for (const key of Object.keys(accessories)) {
+    const enabled = selected.includes(key);
+    document.getElementById(`quantity-row-${key}`).hidden = !enabled;
+    document.getElementById(`quantity-${key}`).disabled = !enabled;
+  }
+  document.querySelectorAll('[data-quantity-change]').forEach(button => {
+    button.disabled = !selected.includes(button.dataset.accessory) || (button.dataset.quantityChange === '-1' && accessoryQuantity(button.dataset.accessory) <= 1);
+  });
+  const count = selected.reduce((total, key) => total + accessoryQuantity(key), 0);
+  document.getElementById('accessory-selection').textContent = selected.length ? `已选 ${selected.length} 类 · ${count} 件` : '可多选';
+}
 const applications = {
   teleoperation: '五点遥操与数采',
   performance: '演示表演',
   adaptation: 'VLA / SONIC 等指定程序适配'
 };
 const views = {
-  concept: { src: './assets/robotdock-concept.png', alt: 'RobotDock 小背包工业设计概念效果图', label: '工业设计 · 概念效果图', caption: '源自背部一体化安装构想', count: '01 / 03' },
+  concept: { src: './assets/robotdock-concept.png', alt: 'RoboDock 小背包工业设计概念效果图', label: '工业设计 · 概念效果图', caption: '源自背部一体化安装构想', count: '01 / 03' },
   sketch: { src: './assets/design-sketch.png', alt: '团队提供的机器人背部安装设计草图，非最终成品', label: '原始草图 · 安装构想', caption: '团队设计参考 · 非最终本体适配图', count: '02 / 03' },
   interfaces: { label: '连接架构 · 接口规划', caption: '接口与协议需逐设备适配', count: '03 / 03' }
 };
@@ -39,9 +58,11 @@ function currentConfiguration() {
   const key = document.querySelector('input[name="edition"]:checked').value;
   const edition = editions[key];
   const options = [`主控暂定：${edition.compute}`, '存储容量与规格待确认'];
-  const peripheral = document.getElementById('peripheral').value;
-  options.push(...peripherals[peripheral]);
-  if (peripheral === 'none') options.push('暂不加配外设');
+  const selected = selectedAccessories();
+  for (const key of selected) {
+    options.push(`${accessories[key].title} × ${accessoryQuantity(key)} ${accessories[key].unit}（型号待确认）`);
+  }
+  options.push(selected.length ? '配套线束与安装件（按适配组合确认）' : '暂不加配外设');
   if (key === 'application') {
     const selected = [...document.querySelectorAll('input[name="application"]:checked')];
     options.push(...(selected.length ? selected.map(input => `应用包需求：${applications[input.value]}（待适配确认）`) : ['应用包需求：待沟通确认']));
@@ -51,6 +72,7 @@ function currentConfiguration() {
   return { key, edition, options };
 }
 function updateConfiguration() {
+  updateAccessoryControls();
   const { key, edition, options } = currentConfiguration();
   const applicationOptions = document.getElementById('application-options');
   applicationOptions.hidden = key !== 'application';
@@ -61,7 +83,18 @@ function updateConfiguration() {
   document.getElementById('compute-model').textContent = edition.compute;
   renderList(document.getElementById('selected-items'), [...edition.items, ...options]);
 }
-document.getElementById('configuration-form').addEventListener('change', updateConfiguration);
+document.getElementById('configuration-form').addEventListener('change', () => {
+  for (const key of Object.keys(accessories)) document.getElementById(`quantity-${key}`).value = String(accessoryQuantity(key));
+  updateConfiguration();
+});
+document.getElementById('configuration-form').addEventListener('input', event => {
+  if (event.target.name === 'accessory-quantity') updateConfiguration();
+});
+document.querySelectorAll('[data-quantity-change]').forEach(button => button.addEventListener('click', () => {
+  const key = button.dataset.accessory;
+  document.getElementById(`quantity-${key}`).value = String(Math.max(1, accessoryQuantity(key) + Number(button.dataset.quantityChange)));
+  updateConfiguration();
+}));
 document.querySelectorAll('[data-select-edition]').forEach(button => button.addEventListener('click', () => {
   const input = document.querySelector(`input[name="edition"][value="${button.dataset.selectEdition}"]`);
   input.checked = true;
@@ -88,7 +121,7 @@ const dialog = document.getElementById('configuration-dialog');
 document.getElementById('configuration-form').addEventListener('submit', event => {
   event.preventDefault();
   const { edition, options } = currentConfiguration();
-  document.getElementById('dialog-title').textContent = `RobotDock · ${edition.title}`;
+  document.getElementById('dialog-title').textContent = `RoboDock · ${edition.title}`;
   document.getElementById('dialog-description').textContent = edition.usage;
   renderList(document.getElementById('dialog-items'), edition.items);
   renderList(document.getElementById('dialog-options'), options);
@@ -98,7 +131,7 @@ document.getElementById('configuration-form').addEventListener('submit', event =
 document.getElementById('copy-configuration').addEventListener('click', async () => {
   const { edition, options } = currentConfiguration();
   const text = [
-    `RobotDock · ${edition.title}`, edition.description, edition.usage,
+    `RoboDock · ${edition.title}`, edition.description, edition.usage,
     '', '版本交付内容', ...edition.items.map(item => `• ${item}`),
     '', '选配与确认事项', ...options.map(item => `• ${item}`),
     '', '方案价格：按配置确认',

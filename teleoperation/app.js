@@ -87,7 +87,7 @@ document.querySelectorAll('.close-image-dialog').forEach(button => button.addEve
   if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) dialog.close();
 }));
 
-// Match the RobotDock template: page-scroll product details, independent sticky purchase panel.
+// Match the RoboDock template: page-scroll product details, independent sticky purchase panel.
 const purchasePanel = document.querySelector('.purchase-panel');
 const desktopLayout = window.matchMedia('(min-width: 801px)');
 function syncPurchasePanelHeight() {
