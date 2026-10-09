@@ -3,23 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="RobotDock 通用机器人小背包产品展示：小背包、灵巧手套装、夹爪套装、夹爪与双腕相机套装；设备套装送连接件。">
+  <meta name="description" content="RobotDock 宇树 G1 计算与外设扩展平台：基础接入版、板载开发版、板载应用版，按需选择算力、外设与应用包。">
   <meta name="robots" content="noindex,nofollow">
   <meta name="theme-color" content="#101b20">
-  <title>ONE-G Robotics · RobotDock 通用机器人小背包</title>
+  <title>ONE-G Robotics · RobotDock 计算与外设扩展平台</title>
   <link rel="icon" type="image/svg+xml" href="./assets/one-g-symbol.svg">
-  <link rel="stylesheet" href="./styles.css?v=independent-scroll-1">
-  <script src="./app.js?v=independent-scroll-1" defer></script>
+  <link rel="stylesheet" href="./styles.css?v=delivery-20261009-1">
+  <script src="./app.js?v=delivery-20261009-1" defer></script>
 </head>
-<body>
-  <div class="prototype-strip"><span>产品概念预览</span><span>仅供方案讨论 · 暂未开放销售</span></div>
+<body class="robotdock-page">
+  <a class="skip-link" href="#main">跳转到产品内容</a>
+  <div class="prototype-strip"><span>产品规划预览</span><span>方案讨论稿 · 配置与交付范围待确认</span></div>
   <header class="site-header">
     <a href="#" class="brand company-brand" aria-label="ONE-G Robotics 首页"><img class="company-logo" src="./assets/one-g-logo.svg" alt="ONE-G Robotics" width="154" height="70"></a>
-    <nav aria-label="主导航"><a href="#details">产品详情</a><a href="#compatibility">兼容设备</a><a href="#specifications">接口与规格</a></nav>
+    <nav aria-label="主导航"><a href="#editions">版本对比</a><a href="#configuration">配置方案</a><a href="#specifications">产品规格</a></nav>
     <span class="header-caption">为每一次拓展，做好连接。</span>
   </header>
-  <main class="page-shell">
-    <div class="breadcrumb"><a href="#">产品中心</a><span>/</span><span>机器人扩展</span><span>/</span><strong>RobotDock 小背包</strong></div>
+  <main class="page-shell" id="main">
+    <div class="breadcrumb"><a href="#">产品中心</a><span>/</span><span>G1 扩展平台</span><span>/</span><strong>RobotDock 小背包</strong></div>
+    <section class="delivery-hero" aria-labelledby="hero-title">
+      <div class="hero-heading"><div><span class="eyebrow">ROBOTDOCK / ONE PLATFORM, THREE EDITIONS</span><h1 id="hero-title">一个背包，<span>三种交付方式。</span></h1></div><p>宇树 G1 计算与外设扩展平台<br>从连接已有算力，到板载开发与应用交付。</p></div>
+      <ol class="delivery-path" aria-label="三种交付方式的能力关系">
+        <li class="path-step access-tone"><span class="path-number">01</span><div><strong>基础接入</strong><span>连接已有计算设备</span></div><span class="path-add">＋ 算力 →</span></li>
+        <li class="path-step develop-tone"><span class="path-number">02</span><div><strong>板载开发</strong><span>在背包内自主开发</span></div><span class="path-add">＋ 应用包 →</span></li>
+        <li class="path-step application-tone"><span class="path-number">03</span><div><strong>应用交付</strong><span>直接使用，也可二次开发</span></div></li>
+      </ol>
+    </section>
     <div class="product-layout">
       <div class="product-content">
         <section class="gallery" aria-label="商品图片">
@@ -30,7 +39,7 @@
               <span class="eyebrow">CONNECTION ARCHITECTURE</span><h2>把连接，集中在一起。</h2>
               <p>拟定接口方案 · 数量与电气规格待确认</p>
               <div class="diagram-host">宇树 G1 <small>首发适配目标</small></div><div class="diagram-line"></div>
-              <div class="diagram-core">ROBOTDOCK <small>供电管理 / 通信接入 / 设备驱动</small></div><div class="diagram-line"></div>
+              <div class="diagram-core">ROBOTDOCK <small>基础 SDK / 外设接入 / 可选板载算力</small></div><div class="diagram-line"></div>
               <div class="diagram-ports"><span>CAN</span><span>RS-485</span><span>Ethernet</span><span>USB</span></div><div class="diagram-line"></div>
               <div class="diagram-tools"><span>夹爪</span><span>灵巧手</span><span>传感器</span></div>
             </div>
@@ -43,15 +52,39 @@
             <span class="gallery-note">概念图，非实物照片</span>
           </div>
         </section>
-        <section class="benefits" aria-label="产品设计重点"><div><span class="benefit-index">01</span><h3>集中供电</h3><p>少一些散落的电源与线缆</p></div><div><span class="benefit-index">02</span><h3>统一通信</h3><p>把不同设备接入同一平台</p></div><div><span class="benefit-index">03</span><h3>快速换装</h3><p>已适配设备，简化安装调试</p></div></section>
-        <section class="details-section" id="details">
-          <div class="section-heading"><span class="eyebrow">DESIGNED TO CONNECT</span><span class="section-number">01 / 产品详情</span></div>
-          <h2>一个小背包，<br>连接更多可能。</h2>
-          <p class="section-intro">把供电、通信和设备驱动集中到背包里。搭配对应线束与手腕安装件，让机器人更方便地接入夹爪和灵巧手。</p>
-          <div class="feature-list"><article><span>01</span><div><h3>通用能力，集成在背包内</h3><p>规划集成供电管理、通信接口和驱动软件，减少重复接线与开发。</p></div></article><article><span>02</span><div><h3>专用适配，随套装交付</h3><p>根据末端设备，配齐线束、机械安装件和对应驱动。</p></div></article><article><span>03</span><div><h3>面向已适配设备的即插即用</h3><p>先把选定组合调通，再提供统一的安装、配置和调用体验。</p></div></article></div>
+        <section class="benefits" aria-label="平台能力"><div><span class="benefit-index">01</span><h3>统一接入</h3><p>供电、通信与基础 SDK</p></div><div><span class="benefit-index">02</span><h3>算力随身</h3><p>可选板载开发环境</p></div><div><span class="benefit-index">03</span><h3>应用扩展</h3><p>按场景选配应用包</p></div></section>
+        <section class="details-section editions-section" id="editions">
+          <div class="section-heading"><span class="eyebrow">CHOOSE YOUR STARTING POINT</span><span class="section-number">01 / 版本对比</span></div>
+          <h2>从你的工作方式出发。</h2>
+          <p class="section-intro">已有计算设备、希望自主开发，或需要预设应用。选择适合团队的交付方式，再配置外设与服务。</p>
+          <div class="edition-cards">
+            <article class="edition-card access-tone">
+              <div class="edition-heading"><span>01 / CONNECT</span><span class="edition-chip">已有算力，快速接入</span></div><h3>基础接入版</h3>
+              <dl><div><dt>适合谁</dt><dd>已有工作站或计算设备的团队</dd></div><div><dt>交付什么</dt><dd>接入硬件、基础 SDK、驱动与文档</dd></div><div><dt>如何使用</dt><dd>外部设备运行客户程序，背包提供数据与控制接口。</dd></div></dl>
+              <div class="edition-bottom"><div class="capability-tags"><span>基础 SDK</span></div><button type="button" class="text-button" data-select-edition="access">选择接入版 <span aria-hidden="true">↗</span></button></div>
+            </article>
+            <article class="edition-card develop-tone">
+              <div class="edition-heading"><span>02 / DEVELOP</span><span class="edition-chip">算力随身，自主开发</span></div><h3>板载开发版</h3>
+              <dl><div><dt>适合谁</dt><dd>需要板载开发环境的研发团队</dd></div><div><dt>交付什么</dt><dd>算力平台、基础 SDK 与开发环境</dd></div><div><dt>如何使用</dt><dd>在背包内开发与部署程序，通过 SSH 或本机接口接入。</dd></div></dl>
+              <div class="edition-bottom"><div class="capability-tags"><span>基础 SDK</span><span>板载算力</span></div><button type="button" class="text-button" data-select-edition="development">选择开发版 <span aria-hidden="true">↗</span></button></div>
+            </article>
+            <article class="edition-card application-tone">
+              <div class="edition-heading"><span>03 / DEPLOY</span><span class="edition-chip">应用就绪，按需扩展</span></div><h3>板载应用版</h3>
+              <dl><div><dt>适合谁</dt><dd>直接数采、表演，或进行二次开发的团队</dd></div><div><dt>交付什么</dt><dd>开发版全部内容 + 选配应用包</dd></div><div><dt>如何使用</dt><dd>通过 Web 使用预设程序，通过开放接口进行二次开发。</dd></div></dl>
+              <div class="edition-bottom"><div class="capability-tags"><span>基础 SDK</span><span>板载算力</span><span>应用包</span></div><button type="button" class="text-button" data-select-edition="application">选择应用版 <span aria-hidden="true">↗</span></button></div>
+            </article>
+          </div>
+        </section>
+        <section class="applications-section" id="applications">
+          <div class="section-heading"><span class="eyebrow">APPLICATION POSSIBILITIES</span><span class="section-number">02 / 应用与选配</span></div>
+          <h2>把平台，接入你的场景。</h2>
+          <p class="section-intro">板载应用版按需求评估应用包与适配服务，保留进一步开发的空间。</p>
+          <div class="application-examples"><article><span>01 / CAPTURE</span><h3>五点遥操与数采</h3><p>围绕遥操作与数据采集，评估设备组合、安装与标定。</p></article><article><span>02 / PERFORM</span><h3>演示表演</h3><p>按演示场景确定预设程序、运行条件和交付范围。</p></article><article><span>03 / ADAPT</span><h3>VLA / SONIC 适配</h3><p>围绕指定程序评估算力、软件环境与接口适配。</p></article></div>
+          <div class="option-note"><strong>按需选配</strong><p>算力配置 / 存储容量 / 相机与末端设备 / 应用包与适配服务</p></div>
+          <p class="footnote">以上为应用示例。应用包限已验证的 G1、外设与软件组合，需必要安装与标定；二次开发范围按应用包约定。应用性能、基础 Web 与记录范围待验证 / 确认。</p>
         </section>
         <section class="compatibility-section" id="compatibility">
-          <div class="section-heading"><span class="eyebrow">COMPATIBILITY</span><span class="section-number">02 / 兼容设备</span></div>
+          <div class="section-heading"><span class="eyebrow">COMPATIBILITY</span><span class="section-number">03 / 兼容设备</span></div>
           <h2>先把一套做好，<br>再连接下一种。</h2>
           <div class="device-row"><div class="device-letter">G1</div><div><h3>宇树 G1</h3><p>首发本体 · 具体版本待确认</p></div><span class="status planned">适配目标</span></div>
           <div class="device-row"><div class="device-letter">AG</div><div><h3>智元夹爪</h3><p>团队已完成接入 · 产品型号待确认</p></div><span class="status integrated">已有接入基础</span></div>
@@ -59,34 +92,44 @@
           <p class="footnote">接入基础不等于量产验证。兼容范围、安装方式与支持功能，以后续测试结果为准。</p>
         </section>
         <section class="spec-section" id="specifications">
-          <div class="section-heading"><span class="eyebrow">TECHNICAL OVERVIEW</span><span class="section-number">03 / 接口与规格</span></div>
+          <div class="section-heading"><span class="eyebrow">TECHNICAL OVERVIEW</span><span class="section-number">04 / 接口与规格</span></div>
           <h2>接口清晰，拓展有据。</h2>
           <p class="section-intro">以下为第一代产品规划，便于讨论选型。</p>
-          <dl class="spec-table"><div><dt>通信接口</dt><dd>CAN / RS-485 / Ethernet / USB <small>拟定</small></dd></div><div><dt>供电能力</dt><dd>集中供电与保护 <small>电压、功率及取电方式待确认</small></dd></div><div><dt>软件接口</dt><dd>ROS 2 / DDS / Python SDK <small>规划支持</small></dd></div><div><dt>安装方式</dt><dd>背部安装 + 专用线束 + 手腕转接件</dd></div><div><dt>换装方式</dt><dd>外设独立断电换装（规划）<small>暂停任务、安全停稳后换装并加载配置，减少整机重启</small><small>G1+ 适配、分路供电控制及热插拔能力待验证</small></dd></div><div><dt>尺寸 / 重量</dt><dd>待结构设计与样机验证后公布</dd></div><div><dt>套装范围</dt><dd>小背包 / 小背包 + 灵巧手 / 小背包 + 夹爪 / 小背包 + 夹爪 + 双腕相机<small>后三种套装送连接件</small></dd></div></dl>
+          <dl class="spec-table"><div><dt>通信接口</dt><dd>CAN / RS-485 / Ethernet / USB <small>拟定</small></dd></div><div><dt>供电能力</dt><dd>集中供电与保护 <small>电压、功率及取电方式待确认</small></dd></div><div><dt>基础软件</dt><dd>基础 SDK、驱动与文档<small>ROS 2 / DDS / Python 接口范围待确认</small></dd></div><div><dt>接入版主控</dt><dd>Orin Nano 8GB <small>暂定 · 客户程序运行于外部计算设备</small></dd></div><div><dt>板载版主控</dt><dd>Orin NX 16GB <small>暂定 · 适用于板载开发版与板载应用版</small></dd></div><div><dt>开发与使用</dt><dd>开发版：SSH 或本机接口<br>应用版：Web 预设程序 + 开放接口<small>应用性能、基础 Web 与记录范围待验证 / 确认</small></dd></div><div><dt>存储容量</dt><dd>按项目需求选配 <small>容量与规格待确认</small></dd></div><div><dt>安装方式</dt><dd>背部安装 + 专用线束 + 手腕转接件</dd></div><div><dt>换装方式</dt><dd>外设独立断电换装（规划）<small>暂停任务、安全停稳后换装并加载配置，减少整机重启</small><small>G1+ 适配、分路供电控制及热插拔能力待验证</small></dd></div><div><dt>尺寸 / 重量</dt><dd>待结构设计与样机验证后公布</dd></div><div><dt>交付版本</dt><dd>基础接入版 / 板载开发版 / 板载应用版</dd></div><div><dt>外设选配</dt><dd>灵巧手 / 夹爪 / 夹爪 + 双腕相机<small>具体型号、线束与安装件按适配组合确认</small></dd></div></dl>
         </section>
       </div>
-      <aside class="purchase-panel" aria-label="商品选购" tabindex="0">
-        <div class="product-tagline"><span class="product-badge">首代产品构想</span><span class="sku-id">RD · 01</span></div>
-        <h1>RobotDock<br><span>通用机器人小背包</span></h1>
-        <p class="product-subtitle">供电、通信、驱动，一体接入。<br>为夹爪和灵巧手，准备一个通用入口。</p>
-        <div class="tag-list"><span>面向宇树 G1</span><span>多接口拓展</span><span>配套设备适配</span></div>
-        <div class="price-box"><div><span class="price-label">产品价格</span><strong>待公布</strong></div><p>当前为展示方案，型号与价格尚未定稿。</p></div>
+      <aside class="purchase-panel" id="configuration" aria-label="配置 RobotDock 方案" tabindex="0">
+        <div class="product-tagline"><span class="product-badge">宇树 G1 扩展平台</span><span class="sku-id">RD / 01</span></div>
+        <h2 class="product-title">RobotDock<span>计算与外设扩展平台</span></h2>
+        <p class="product-subtitle">从基础接入到应用交付，<br>让背包适应你的开发与使用方式。</p>
+        <div class="tag-list"><span>基础 SDK</span><span>可选板载算力</span><span>按需适配应用</span></div>
         <form id="configuration-form">
-          <fieldset><legend>选择套装 <span>4 种方案</span></legend>
-            <label class="bundle-option"><input type="radio" name="bundle" value="base" checked><span class="bundle-content"><span class="bundle-top"><strong>小背包</strong><span class="bundle-code">BASE</span></span><span class="bundle-description">背包主机 · 基础软件 · 本体连接线束</span></span><span class="radio-indicator" aria-hidden="true"></span></label>
-            <label class="bundle-option"><input type="radio" name="bundle" value="hand"><span class="bundle-content"><span class="bundle-top"><strong>小背包 + 灵巧手</strong><span class="bundle-gift">（送连接件）</span></span><span class="bundle-description">灵巧操作方案 · 指定型号待选定</span></span><span class="radio-indicator" aria-hidden="true"></span></label>
-            <label class="bundle-option"><input type="radio" name="bundle" value="gripper"><span class="bundle-content"><span class="bundle-top"><strong>小背包 + 夹爪</strong><span class="bundle-gift">（送连接件）</span></span><span class="bundle-description">基础抓取方案 · 团队已有接入基础</span></span><span class="radio-indicator" aria-hidden="true"></span></label>
-            <label class="bundle-option"><input type="radio" name="bundle" value="gripper-camera"><span class="bundle-content"><span class="bundle-top"><strong>小背包 + 夹爪 + 双腕相机</strong><span class="bundle-gift">（送连接件）</span></span><span class="bundle-description">抓取与腕部视觉方案 · 含两台腕部相机</span></span><span class="radio-indicator" aria-hidden="true"></span></label>
+          <fieldset><legend>01 选择交付版本 <span>3 种方式</span></legend>
+            <label class="bundle-option access-tone"><input type="radio" name="edition" value="access" checked><span class="bundle-content"><span class="bundle-top"><strong>基础接入版</strong><span class="bundle-code">CONNECT</span></span><span class="bundle-description">已有算力，快速接入 · 外部设备运行程序</span></span><span class="radio-indicator" aria-hidden="true"></span></label>
+            <label class="bundle-option develop-tone"><input type="radio" name="edition" value="development"><span class="bundle-content"><span class="bundle-top"><strong>板载开发版</strong><span class="bundle-code">DEVELOP</span></span><span class="bundle-description">算力随身，自主开发 · SSH / 本机接口</span></span><span class="radio-indicator" aria-hidden="true"></span></label>
+            <label class="bundle-option application-tone"><input type="radio" name="edition" value="application"><span class="bundle-content"><span class="bundle-top"><strong>板载应用版</strong><span class="bundle-code">DEPLOY</span></span><span class="bundle-description">开发版 + 选配应用包 · Web / 开放接口</span></span><span class="radio-indicator" aria-hidden="true"></span></label>
           </fieldset>
-          <div class="selection-detail" aria-live="polite"><span class="selection-label">当前方案</span><h2 id="selected-title">小背包</h2><p id="selected-description">适合已有末端设备、希望自行拓展的开发团队。</p><ul id="selected-items"><li>背包主机</li><li>基础软件与说明</li><li>本体连接线束</li></ul></div>
-          <button class="primary-button" type="submit"><span>查看套装清单</span><span aria-hidden="true">↗</span></button>
-          <p class="checkout-note">仅预览配置，不下单、不付款。</p>
+          <div class="edition-summary" aria-live="polite"><p id="edition-use">外部计算设备运行客户程序，背包提供数据与控制接口。</p><div><span>主控暂定</span><strong id="compute-model">Orin Nano 8GB</strong></div></div>
+          <fieldset class="application-options" id="application-options" hidden disabled><legend>应用包需求 <span>可多选 · 待适配确认</span></legend><p class="field-help">选择需要评估的场景，也可先保留待沟通。</p>
+            <label class="check-option"><input type="checkbox" name="application" value="teleoperation"><span>五点遥操与数采</span></label>
+            <label class="check-option"><input type="checkbox" name="application" value="performance"><span>演示表演</span></label>
+            <label class="check-option"><input type="checkbox" name="application" value="adaptation"><span>VLA / SONIC 等指定程序适配</span></label>
+            <p class="field-help">限已验证组合，需安装与标定。Web、记录范围及应用性能待确认。</p>
+          </fieldset>
+          <fieldset class="peripheral-options"><legend>02 选配外设 <span>独立于交付版本</span></legend>
+            <label class="select-label" for="peripheral">相机与末端设备</label><select id="peripheral" name="peripheral"><option value="none">暂不加配外设</option><option value="hand">灵巧手</option><option value="gripper">夹爪</option><option value="gripper-camera">夹爪 + 双腕相机（2 台）</option></select><p class="field-help">设备型号、线束与安装件按适配组合确认。</p>
+          </fieldset>
+          <details class="advanced-options"><summary>更多选配需求 <span>算力 / 存储</span></summary><label class="check-option"><input type="checkbox" id="custom-compute"><span>评估其他算力配置</span></label><label class="check-option"><input type="checkbox" id="custom-storage"><span>评估存储容量需求</span></label><p class="field-help">标准存储容量待确认；勾选后计入方案沟通需求。</p></details>
+          <div class="selection-detail" aria-live="polite"><span class="selection-label">当前方案</span><h3 id="selected-title">基础接入版</h3><p id="selected-description">适合已有工作站或计算设备的团队。</p><ul id="selected-items"><li>接入硬件</li><li>基础 SDK</li><li>驱动与文档</li></ul></div>
+          <div class="quote-line"><span>方案价格</span><strong>按配置确认</strong></div>
+          <button class="primary-button" type="submit"><span>查看配置清单</span><span aria-hidden="true">↗</span></button>
+          <p class="checkout-note">用于方案沟通，尚未开放购买。</p>
         </form>
-        <div class="purchase-footer"><span>配套线束</span><span>安装说明</span><span>设备驱动</span></div>
+        <div class="purchase-footer"><span>驱动与文档</span><span>开发环境</span><span>适配服务</span></div>
       </aside>
     </div>
   </main>
-  <footer class="site-footer"><a class="footer-brand company-footer" href="#" aria-label="ONE-G Robotics 首页"><img src="./assets/one-g-logo.svg" alt="ONE-G Robotics" width="110" height="50"><span>RobotDock / CONCEPT 01</span></a><p>产品效果演示 · 外观、接口、兼容性与交付内容待最终确认。</p></footer>
-  <dialog id="configuration-dialog" aria-labelledby="dialog-title"><div class="dialog-header"><span class="eyebrow">YOUR CONFIGURATION</span><button class="close-dialog" type="button" aria-label="关闭套装清单">×</button></div><h2 id="dialog-title">套装清单</h2><p id="dialog-description"></p><ul id="dialog-items"></ul><div class="dialog-price"><span>价格</span><strong>待公布</strong></div><p class="footnote">此清单用于内部方案讨论。机器人本体不包含在套装中；尚未开放购买。</p><button class="primary-button close-dialog" type="button">继续查看产品</button></dialog>
+  <footer class="site-footer"><a class="footer-brand company-footer" href="#" aria-label="ONE-G Robotics 首页"><img src="./assets/one-g-logo.svg" alt="ONE-G Robotics" width="110" height="50"><span>RobotDock / PRODUCT LINE 01</span></a><p>产品规划展示 · 外观、配置与交付范围以最终确认为准。</p></footer>
+  <dialog id="configuration-dialog" aria-labelledby="dialog-title"><div class="dialog-header"><span class="eyebrow">YOUR ROBOTDOCK CONFIGURATION</span><button class="close-dialog" type="button" aria-label="关闭配置清单">×</button></div><h2 id="dialog-title">配置清单</h2><p id="dialog-description"></p><div class="dialog-section-label">版本交付内容</div><ul id="dialog-items"></ul><div class="dialog-section-label">选配与确认事项</div><ul id="dialog-options"></ul><div class="dialog-price"><span>方案价格</span><strong>按配置确认</strong></div><p class="footnote">主控配置为暂定规划，选配需逐项确认。应用包限已验证的 G1、外设与软件组合，需安装与标定；二次开发范围按应用包约定。应用性能、基础 Web 与记录范围待验证 / 确认。机器人本体不包含在方案内。</p><button class="primary-button" id="copy-configuration" type="button">复制配置清单</button><p id="copy-status" role="status"></p><button class="secondary-button close-dialog" type="button">继续调整方案</button></dialog>
 </body>
 </html>
