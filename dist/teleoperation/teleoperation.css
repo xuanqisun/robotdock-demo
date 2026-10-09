@@ -1,4 +1,4 @@
-/* Extend the existing ONE-G product template without changing RobotDock. */
+/* Extend the existing ONE-G product template without changing RoboDock. */
 .teleop-stage{aspect-ratio:auto;background:#f5f7f7;border:1px solid var(--line);display:flex;flex-direction:column}
 .gallery-image-button{padding:0;background:transparent;width:100%;height:auto;aspect-ratio:16/9;position:relative;display:block;overflow:hidden}
 .teleop-stage .product-image{position:absolute;inset:0;height:100%;width:100%;object-fit:contain}

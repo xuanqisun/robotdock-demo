@@ -17,7 +17,7 @@ const fields = Object.fromEntries(credential.trim().split('\n').map(line => {
   const i = line.indexOf('='); return [line.slice(0, i), line.slice(i + 1)];
 }));
 if (!fields.password) throw new Error('Credential helper returned no usable credential');
-const headers = { Authorization: `Bearer ${fields.password}`, Accept: 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28', 'User-Agent': 'RobotDock-Pages-Publisher' };
+const headers = { Authorization: `Bearer ${fields.password}`, Accept: 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28', 'User-Agent': 'RoboDock-Pages-Publisher' };
 const base = 'https://api.github.com/repos/xuanqisun/robotdock-demo';
 async function request(path, method = 'GET', body) {
   const response = await fetch(`${base}${path}`, { method, headers, ...(body ? {body:JSON.stringify(body)} : {}) });
