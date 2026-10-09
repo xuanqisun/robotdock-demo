@@ -64,7 +64,7 @@ GitHub Pages 从 `gh-pages` 的根目录自动发布。`node github-pages.mjs st
 
 ## 图片
 
-`one-g-logo.svg` / `one-g-symbol.svg`：用户公司 ONE-G Robotics 的原版矢量标识，取自所提供 AI 文件同目录的 SVG 导出版本。仅裁切画板空白，未改动标识路径或比例。
+`one-g-logo.svg` / `one-g-symbol.svg`：用户公司 ONE-G Robotics 的原版矢量标识，取自所提供 AI 文件同目录的 SVG 导出版本。原版资产仅裁切画板空白。页头使用 `one-g-logo-horizontal.svg`：沿用同一原始矢量路径，单独缩放圆形与字标并调整间距，使导航栏中的圆形高度接近文字组合高度；未重绘字形或图形轮廓。页脚与图标保留原版资产。
 
 `design-sketch.png`：用户提供的设计参考草图。
 
